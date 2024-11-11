@@ -8,7 +8,7 @@ fi
 kubectl apply -f config/timeslicing.yaml
 kubectl delete -f config/timeslicing.yaml
 
-helm uninstall gpu-operator --name gpu-operator --purge || true
+helm uninstall gpu-operator || true
 
 kubectl delete deployment ollama --cascade=true
 kubectl delete deployment webui --cascade=true
